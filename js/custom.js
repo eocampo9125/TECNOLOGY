@@ -415,3 +415,13 @@ $(document).ready(function()
     	}	
     }
 });
+
+window.addEventListener('scroll', function() {
+    var logo = document.getElementById('logo');
+    if (window.scrollY > 100) { // Cambia '50' por el valor de desplazamiento deseado
+        logo.classList.add('shrink'); // Reduce el logo
+    } else {
+        logo.classList.remove('shrink'); // Restaura el tamaño original
+    }
+});
+
