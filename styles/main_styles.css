@@ -851,7 +851,7 @@ section
 	
 }
 .v_slider_image
-{
+{	
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -987,6 +987,7 @@ section
 	background: #452b78;
 }
 
+
 /*********************************
 7. Services
 *********************************/
@@ -1071,7 +1072,7 @@ section
 }
 .services_slider .owl-item.center .services_item_inner
 {
-	background: #452b78;
+	background: #009d87;
 }
 .services_item
 {
@@ -1138,7 +1139,7 @@ section
 {
 	position: absolute;
 	bottom: -94px;
-	left: 0;
+	left: 16 !important;
 	border-color: #FFFFFF;
 	color: #FFFFFF;
 	visibility: hidden;
@@ -1177,7 +1178,7 @@ section
 .service_item_icon
 {
 	position: absolute;
-	top: -70px;
+	top: -80px;
 	left: 0;
 	width: 42px;
 	height: 42px;
@@ -1218,13 +1219,13 @@ section
 {
 	width: 11px !important;
 	height: 11px !important;
-	background: #d6cbed;
+	background: #009d87;
 }
 .services_slider.owl-theme .owl-dots .owl-dot.active span
 {
 	width: 18px !important;
 	height: 18px !important;
-	background: #452b78;
+	background: #0a0f2d
 }
 .services_slider_nav
 {
@@ -1610,4 +1611,12 @@ section
     height: auto;
     /* Puedes agregar un tamaño máximo si lo deseas */
     max-width: 300px; /* Ajusta este valor según tus necesidades */
+}
+
+.col-c{
+	color: #c7e5d5;		
+}
+
+.jus {
+	text-align: justify;
 }
