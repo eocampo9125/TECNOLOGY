@@ -424,4 +424,3 @@ window.addEventListener('scroll', function() {
         logo.classList.remove('shrink'); // Restaura el tamaño original
     }
 });
-
