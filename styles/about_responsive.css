@@ -469,3 +469,135 @@
 {
 	
 }
+
+.cen {
+    text-align: center;
+}
+
+.carrusel {
+    width: 100%;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    white-space: nowrap; /* Evita que los elementos se envuelvan */
+}
+
+.carrusel-items {
+    display: inline-block; /* Permite que los elementos estén en una sola línea */
+}
+
+.loger {
+    display: inline-block; /* Coloca los slides en línea */
+    width: 200px; /* Ancho de cada slide */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 30px; /* Espacio entre los slides */
+    filter: grayscale(100%); /* Inicia en blanco y negro */
+    transition: filter 0.5s ease-in-out; /* Transición suave para el efecto de color */
+}
+
+/* Cuando el carrusel está en hover, los elementos visibles cambian a color */
+.carrusel:hover .loger {
+    filter: grayscale(0%);
+}
+
+/* Opcional: Aplicar el efecto de color solo a los elementos visibles */
+.carrusel-items .loger {
+    filter: grayscale(100%);
+}
+
+.carrusel-items .loger:hover {
+    filter: grayscale(0%);
+}
+
+
+.image_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Ajusta el padding según sea necesario */
+}
+
+.image_box img {
+    max-width: 100%;
+    height: auto;
+    /* Puedes agregar un tamaño máximo si lo deseas */
+    max-width: 300px; /* Ajusta este valor según tus necesidades */
+}
+
+.col-c{
+	color: #c7e5d5;		
+}
+
+.jus {
+	text-align: justify;
+}
+
+.tit {
+    font-size: 30px;
+    color: #2f9c87;
+	text-align: center;
+}
+
+/* Estilo para el footer */
+.footer {
+	background-color: #0c0f2d;
+	color: #fff;
+	padding: 20px 0;
+}
+
+.footer h5 {
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+	color: #bbb;
+	margin-bottom: 10px;
+}
+
+.footer a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Estilo para los íconos de redes sociales */
+
+.e- {
+    letter-spacing: 9px;
+}
+.social-icons .social-icon img {
+	width: 20px;
+	height: 20px;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons .social-icon:hover img {
+	transform: scale(1.1);
+	opacity: 0.7;
+}
+
+/* Estilo Responsive */
+@media (max-width: 768px) {
+	.social-icons {
+		justify-content: center;
+	}
+
+	.social-icons .social-icon img {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.social-icons {
+		flex-direction: column;
+		align-items: center;
+		gap: 9px;
+	}
+
+	.social-icons .social-icon img {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+

@@ -335,6 +335,8 @@ section
 	background:rgb(3 12 37 / 22%);
 	z-index: 10;
 }
+
+
 .header.scrolled
 {
 	height: 92px;
@@ -1687,3 +1689,4 @@ section
 		height: 20px;
 	}
 }
+

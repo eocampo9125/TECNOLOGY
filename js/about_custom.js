@@ -320,3 +320,46 @@ $(document).ready(function()
     	}	
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carrusel = document.querySelector('.carrusel-items');
+    const slides = Array.from(carrusel.querySelectorAll('.loger'));
+    const slideWidth = slides[0].offsetWidth; // Ancho de cada slide en píxeles
+
+    // Clonamos los slides para crear un efecto infinito
+    slides.forEach(slide => {
+        const clone = slide.cloneNode(true); // Clonamos cada slide
+        carrusel.appendChild(clone); // Añadimos el clon al final
+    });
+
+    let position = 0;
+    const speed = 1; // Velocidad de desplazamiento (píxeles por frame)
+    let animationFrame; // Para manejar la animación
+
+    function animate() {
+        position -= speed; // Movemos el carrusel hacia la izquierda
+        if (position <= -slideWidth) {
+            // Si un slide sale completamente de la vista, lo movemos al final
+            const firstSlide = carrusel.firstElementChild;
+            carrusel.style.transition = 'none'; // Desactivamos la transición
+            carrusel.style.transform = `translateX(${position + slideWidth}px)`; // Ajustamos la posición
+            carrusel.appendChild(firstSlide); // Movemos el primer slide al final
+            position += slideWidth; // Ajustamos la posición para evitar saltos
+        }
+        carrusel.style.transform = `translateX(${position}px)`; // Aplicamos la transformación
+        animationFrame = requestAnimationFrame(animate); // Continuamos la animación
+    }
+
+    // Iniciamos la animación
+    animate();
+
+    // Opcional: Detener la animación al hacer hover
+    carrusel.addEventListener('mouseenter', () => {
+        cancelAnimationFrame(animationFrame);
+    });
+
+    carrusel.addEventListener('mouseleave', () => {
+        animate();
+    });
+});
