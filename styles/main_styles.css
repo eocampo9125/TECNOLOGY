@@ -1699,3 +1699,12 @@ section
 	}
 }
 
+.v_slider_item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+}
+
+.v_slider_item:hover {
+    transform: translateY(20px);
+    opacity: 0.95;
+}
