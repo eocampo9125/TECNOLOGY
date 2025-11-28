@@ -312,6 +312,13 @@ section
 	width: 100%;
 	height: 100%;
 }
+
+@media (max-width: 768px) {
+    .home_background_container {
+        height: 100vh;        /* Asegura cobertura total */
+    }
+}
+
 .home_background
 {
 	width: 100%;
@@ -340,7 +347,7 @@ section
 .header.scrolled
 {
 	height: 92px;
-	background: rgb(10 15 45);
+	background: rgb(0 0 19);
 }
 
 #background-video {
@@ -1594,7 +1601,9 @@ section
         justify-content: flex-start; /* Alinea el logo a la izquierda en pantallas pequeñas */
     }
     .logo {
-        max-width: 100px; /* Ajusta el tamaño máximo del logo en pantallas pequeñas */
+       left: 0;          /* Asegura la posición a la izquierda */
+        right: auto;      /* Evita que quede centrado o a la derecha */
+        width: 100%;      /* Opcional: ajusta el ancho en móviles */
     }
 }
 
